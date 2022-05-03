@@ -2,9 +2,9 @@
 # Eng /Kerolos Shenouda 
 ## Contents
 
-### First Term ![image](https://progress-bar.dev/35/?title=Done)
+### First Term ![image](https://progress-bar.dev/35/?title=Running)
 
-- [Unit 1: Diploma Prerequisites](https://github.com/Mina-Karam/Master_Embedded_Systems) ![image](https://progress-bar.dev/100/?title=No_Assignments&color=bababa)
+- [Unit 1: Diploma Prerequisites](Unit 1) ![image](https://progress-bar.dev/100/?s&color=bababa)
 - [Unit 2: C Programming](Unit_2_C_Programming) ![image](https://progress-bar.dev/100/)
 - [Unit 3: Embedded C](Unit_3_Embedded_C) ![image](https://progress-bar.dev/40/)
 - [Unit 4: System Architect](Unit_4_System_Architecture) ![image](https://progress-bar.dev/0/)
