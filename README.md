@@ -1,4 +1,4 @@
-# Online-Embedded-Systems-Diploma
+# Embedded Systems Diploma
 # Eng /Kerolos Shenouda 
 ## Contents
 
