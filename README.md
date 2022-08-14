@@ -5,10 +5,10 @@
 ### First Term ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
 
 - [Unit 1: Diploma Prerequisites](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
-- [Unit 2: C Programming](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma/tree/main/C%20programming)) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
-- [Unit 3: Embedded C](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma/tree/main/Embedded%20C)) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
-- [Unit 4: System Architect](Unit_4_System_Architecture](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma/tree/main/Data%20structure%20and%20system%20design/Lesson1)) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
-- [Unit 5: First Term Projects](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma/tree/main/firstTermProjects)) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
+- [Unit 2: C Programming](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma/tree/main/C%20programming) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
+- [Unit 3: Embedded C](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma/tree/main/Embedded%20C) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
+- [Unit 4: System Architect](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma/tree/main/Data%20structure%20and%20system%20design/Lesson1) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
+- [Unit 5: First Term Projects](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma/tree/main/firstTermProjects) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
 
 
 ### Second Term ![image](https://progress-bar.dev/0/?title=Running)
