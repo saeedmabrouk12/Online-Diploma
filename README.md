@@ -13,7 +13,7 @@
 
 ### Second Term ![image](https://progress-bar.dev/0/?title=Running)
 
-- [Unit 6: MCU Fundamentals](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma) ![image](https://progress-bar.dev/0/)
+- [Unit 6: MCU Fundamentals](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma) ![image](https://progress-bar.dev/100/?title=Done&color=bababa)
 - [Unit 7: MCU Essential Peripherals](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma) ![image](https://progress-bar.dev/0/)
 - [Unit 8: MCU Interfacing](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma) ![image](https://progress-bar.dev/0/)
 - [Unit 9: MCU Timers/ADC](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma) ![image](https://progress-bar.dev/0/)
@@ -21,3 +21,6 @@
 - [Unit 11: Apply on Embedded Systems Jobs](https://github.com/saeedmabrouk21/Online-Embedded-Systems-Diploma) ![image](https://progress-bar.dev/0/)
 
 
+### First Term Certificate
+
+![firstTermDiploma](https://user-images.githubusercontent.com/73306180/190437039-8eefc8d0-52c2-4b17-a84b-daca4ddf889c.jpg)
