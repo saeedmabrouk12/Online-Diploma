@@ -1,0 +1,1651 @@
+09:09:09 **** Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"M:\embedded\Diploma\GitRepo\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-size   Drivers.elf 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.bin
+ 
+Finished building: Drivers.list
+ 
+09:14:45 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"M:\embedded\Diploma\GitRepo\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.bin
+Finished building: Drivers.list
+ 
+ 
+12:44:00 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+ 
+12:46:35 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+ 
+11:51:09 **** Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"M:\embedded\Diploma\GitRepo\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-size   Drivers.elf 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.list
+ 
+14:25:27 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: error: 'config_reg' undeclared (first use in this function)
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:46: error: 'PinConfig' undeclared (first use in this function); did you mean 'PinConfiq'?
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                              ^~~~~~~~~
+      |                                              PinConfiq
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:92:21: warning: variable 'configRegister' set but not used [-Wunused-but-set-variable]
+   92 |  volatile uint32_t* configRegister = NULL;
+      |                     ^~~~~~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:161:1: warning: control reaches end of non-void function [-Wreturn-type]
+  161 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:171:1: warning: control reaches end of non-void function [-Wreturn-type]
+  171 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:224:1: warning: control reaches end of non-void function [-Wreturn-type]
+  224 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+14:26:02 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: error: 'config_reg' undeclared (first use in this function)
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:46: error: 'PinConfig' undeclared (first use in this function); did you mean 'PinConfiq'?
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                              ^~~~~~~~~
+      |                                              PinConfiq
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:92:21: warning: variable 'configRegister' set but not used [-Wunused-but-set-variable]
+   92 |  volatile uint32_t* configRegister = NULL;
+      |                     ^~~~~~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:136:1: error: expected identifier or '(' before '}' token
+  136 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:1: warning: control reaches end of non-void function [-Wreturn-type]
+  162 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:172:1: warning: control reaches end of non-void function [-Wreturn-type]
+  172 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:225:1: warning: control reaches end of non-void function [-Wreturn-type]
+  225 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+14:26:41 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: error: 'config_reg' undeclared (first use in this function)
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:46: error: 'PinConfig' undeclared (first use in this function); did you mean 'PinConfiq'?
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                              ^~~~~~~~~
+      |                                              PinConfiq
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:92:21: warning: variable 'configRegister' set but not used [-Wunused-but-set-variable]
+   92 |  volatile uint32_t* configRegister = NULL;
+      |                     ^~~~~~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:136:1: error: expected identifier or '(' before '}' token
+  136 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:1: warning: control reaches end of non-void function [-Wreturn-type]
+  162 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:172:1: warning: control reaches end of non-void function [-Wreturn-type]
+  172 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:225:1: warning: control reaches end of non-void function [-Wreturn-type]
+  225 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+14:26:50 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: error: 'config_reg' undeclared (first use in this function)
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:46: error: 'PinConfig' undeclared (first use in this function); did you mean 'PinConfiq'?
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                              ^~~~~~~~~
+      |                                              PinConfiq
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:92:21: warning: variable 'configRegister' set but not used [-Wunused-but-set-variable]
+   92 |  volatile uint32_t* configRegister = NULL;
+      |                     ^~~~~~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:1: warning: control reaches end of non-void function [-Wreturn-type]
+  162 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:172:1: warning: control reaches end of non-void function [-Wreturn-type]
+  172 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:225:1: warning: control reaches end of non-void function [-Wreturn-type]
+  225 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+14:27:51 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: error: 'config_reg' undeclared (first use in this function)
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:46: error: 'PinConfig' undeclared (first use in this function); did you mean 'PinConfiq'?
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                              ^~~~~~~~~
+      |                                              PinConfiq
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:92:21: warning: variable 'configRegister' set but not used [-Wunused-but-set-variable]
+   92 |  volatile uint32_t* configRegister = NULL;
+      |                     ^~~~~~~~~~~~~~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_DeInit':
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:148:4: note: in expansion of macro 'RCC'
+  148 |    RCC->APB2RSTR |= (1<<2);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:148:4: note: in expansion of macro 'RCC'
+  148 |    RCC->APB2RSTR |= (1<<2);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:148:4: note: in expansion of macro 'RCC'
+  148 |    RCC->APB2RSTR |= (1<<2);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:148:7: error: expected expression before '->' token
+  148 |    RCC->APB2RSTR |= (1<<2);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:149:4: note: in expansion of macro 'RCC'
+  149 |    RCC->APB2RSTR &= ~(1<<2);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:149:4: note: in expansion of macro 'RCC'
+  149 |    RCC->APB2RSTR &= ~(1<<2);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:149:4: note: in expansion of macro 'RCC'
+  149 |    RCC->APB2RSTR &= ~(1<<2);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:149:7: error: expected expression before '->' token
+  149 |    RCC->APB2RSTR &= ~(1<<2);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:153:4: note: in expansion of macro 'RCC'
+  153 |    RCC->APB2RSTR |= (1<<3);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:153:4: note: in expansion of macro 'RCC'
+  153 |    RCC->APB2RSTR |= (1<<3);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:153:4: note: in expansion of macro 'RCC'
+  153 |    RCC->APB2RSTR |= (1<<3);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:153:7: error: expected expression before '->' token
+  153 |    RCC->APB2RSTR |= (1<<3);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:154:4: note: in expansion of macro 'RCC'
+  154 |    RCC->APB2RSTR &= ~(1<<3);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:154:4: note: in expansion of macro 'RCC'
+  154 |    RCC->APB2RSTR &= ~(1<<3);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:154:4: note: in expansion of macro 'RCC'
+  154 |    RCC->APB2RSTR &= ~(1<<3);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:154:7: error: expected expression before '->' token
+  154 |    RCC->APB2RSTR &= ~(1<<3);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:158:4: note: in expansion of macro 'RCC'
+  158 |    RCC->APB2RSTR |= (1<<4);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:158:4: note: in expansion of macro 'RCC'
+  158 |    RCC->APB2RSTR |= (1<<4);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:158:4: note: in expansion of macro 'RCC'
+  158 |    RCC->APB2RSTR |= (1<<4);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:158:7: error: expected expression before '->' token
+  158 |    RCC->APB2RSTR |= (1<<4);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:159:4: note: in expansion of macro 'RCC'
+  159 |    RCC->APB2RSTR &= ~(1<<4);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:159:4: note: in expansion of macro 'RCC'
+  159 |    RCC->APB2RSTR &= ~(1<<4);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:159:4: note: in expansion of macro 'RCC'
+  159 |    RCC->APB2RSTR &= ~(1<<4);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:159:7: error: expected expression before '->' token
+  159 |    RCC->APB2RSTR &= ~(1<<4);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:4: note: in expansion of macro 'RCC'
+  162 |    RCC->APB2RSTR |= (1<<5);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:4: note: in expansion of macro 'RCC'
+  162 |    RCC->APB2RSTR |= (1<<5);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:4: note: in expansion of macro 'RCC'
+  162 |    RCC->APB2RSTR |= (1<<5);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:7: error: expected expression before '->' token
+  162 |    RCC->APB2RSTR |= (1<<5);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:163:4: note: in expansion of macro 'RCC'
+  163 |    RCC->APB2RSTR &= ~(1<<5);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:163:4: note: in expansion of macro 'RCC'
+  163 |    RCC->APB2RSTR &= ~(1<<5);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:163:4: note: in expansion of macro 'RCC'
+  163 |    RCC->APB2RSTR &= ~(1<<5);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:163:7: error: expected expression before '->' token
+  163 |    RCC->APB2RSTR &= ~(1<<5);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:167:4: note: in expansion of macro 'RCC'
+  167 |    RCC->APB2RSTR |= (1<<6);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:167:4: note: in expansion of macro 'RCC'
+  167 |    RCC->APB2RSTR |= (1<<6);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:167:4: note: in expansion of macro 'RCC'
+  167 |    RCC->APB2RSTR |= (1<<6);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:167:7: error: expected expression before '->' token
+  167 |    RCC->APB2RSTR |= (1<<6);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:168:4: note: in expansion of macro 'RCC'
+  168 |    RCC->APB2RSTR &= ~(1<<6);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:168:4: note: in expansion of macro 'RCC'
+  168 |    RCC->APB2RSTR &= ~(1<<6);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:168:4: note: in expansion of macro 'RCC'
+  168 |    RCC->APB2RSTR &= ~(1<<6);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:168:7: error: expected expression before '->' token
+  168 |    RCC->APB2RSTR &= ~(1<<6);
+      |       ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+14:28:45 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: error: 'config_reg' undeclared (first use in this function)
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:46: error: 'PinConfig' undeclared (first use in this function); did you mean 'PinConfiq'?
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                              ^~~~~~~~~
+      |                                              PinConfiq
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:92:21: warning: variable 'configRegister' set but not used [-Wunused-but-set-variable]
+   92 |  volatile uint32_t* configRegister = NULL;
+      |                     ^~~~~~~~~~~~~~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_DeInit':
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:148:4: note: in expansion of macro 'RCC'
+  148 |    RCC->APB2RSTR |= (1<<2);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:148:4: note: in expansion of macro 'RCC'
+  148 |    RCC->APB2RSTR |= (1<<2);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:148:4: note: in expansion of macro 'RCC'
+  148 |    RCC->APB2RSTR |= (1<<2);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:148:7: error: expected expression before '->' token
+  148 |    RCC->APB2RSTR |= (1<<2);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:149:4: note: in expansion of macro 'RCC'
+  149 |    RCC->APB2RSTR &= ~(1<<2);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:149:4: note: in expansion of macro 'RCC'
+  149 |    RCC->APB2RSTR &= ~(1<<2);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:149:4: note: in expansion of macro 'RCC'
+  149 |    RCC->APB2RSTR &= ~(1<<2);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:149:7: error: expected expression before '->' token
+  149 |    RCC->APB2RSTR &= ~(1<<2);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:153:4: note: in expansion of macro 'RCC'
+  153 |    RCC->APB2RSTR |= (1<<3);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:153:4: note: in expansion of macro 'RCC'
+  153 |    RCC->APB2RSTR |= (1<<3);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:153:4: note: in expansion of macro 'RCC'
+  153 |    RCC->APB2RSTR |= (1<<3);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:153:7: error: expected expression before '->' token
+  153 |    RCC->APB2RSTR |= (1<<3);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:154:4: note: in expansion of macro 'RCC'
+  154 |    RCC->APB2RSTR &= ~(1<<3);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:154:4: note: in expansion of macro 'RCC'
+  154 |    RCC->APB2RSTR &= ~(1<<3);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:154:4: note: in expansion of macro 'RCC'
+  154 |    RCC->APB2RSTR &= ~(1<<3);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:154:7: error: expected expression before '->' token
+  154 |    RCC->APB2RSTR &= ~(1<<3);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:158:4: note: in expansion of macro 'RCC'
+  158 |    RCC->APB2RSTR |= (1<<4);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:158:4: note: in expansion of macro 'RCC'
+  158 |    RCC->APB2RSTR |= (1<<4);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:158:4: note: in expansion of macro 'RCC'
+  158 |    RCC->APB2RSTR |= (1<<4);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:158:7: error: expected expression before '->' token
+  158 |    RCC->APB2RSTR |= (1<<4);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:159:4: note: in expansion of macro 'RCC'
+  159 |    RCC->APB2RSTR &= ~(1<<4);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:159:4: note: in expansion of macro 'RCC'
+  159 |    RCC->APB2RSTR &= ~(1<<4);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:159:4: note: in expansion of macro 'RCC'
+  159 |    RCC->APB2RSTR &= ~(1<<4);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:159:7: error: expected expression before '->' token
+  159 |    RCC->APB2RSTR &= ~(1<<4);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:4: note: in expansion of macro 'RCC'
+  162 |    RCC->APB2RSTR |= (1<<5);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:4: note: in expansion of macro 'RCC'
+  162 |    RCC->APB2RSTR |= (1<<5);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:4: note: in expansion of macro 'RCC'
+  162 |    RCC->APB2RSTR |= (1<<5);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:162:7: error: expected expression before '->' token
+  162 |    RCC->APB2RSTR |= (1<<5);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:163:4: note: in expansion of macro 'RCC'
+  163 |    RCC->APB2RSTR &= ~(1<<5);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:163:4: note: in expansion of macro 'RCC'
+  163 |    RCC->APB2RSTR &= ~(1<<5);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:163:4: note: in expansion of macro 'RCC'
+  163 |    RCC->APB2RSTR &= ~(1<<5);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:163:7: error: expected expression before '->' token
+  163 |    RCC->APB2RSTR &= ~(1<<5);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:167:4: note: in expansion of macro 'RCC'
+  167 |    RCC->APB2RSTR |= (1<<6);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:167:4: note: in expansion of macro 'RCC'
+  167 |    RCC->APB2RSTR |= (1<<6);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:167:4: note: in expansion of macro 'RCC'
+  167 |    RCC->APB2RSTR |= (1<<6);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:167:7: error: expected expression before '->' token
+  167 |    RCC->APB2RSTR |= (1<<6);
+      |       ^~
+In file included from M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:15,
+                 from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:16: warning: statement with no effect [-Wunused-value]
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:168:4: note: in expansion of macro 'RCC'
+  168 |    RCC->APB2RSTR &= ~(1<<6);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected ';' before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:168:4: note: in expansion of macro 'RCC'
+  168 |    RCC->APB2RSTR &= ~(1<<6);
+      |    ^~~
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/stm32f103x6.h:151:39: error: expected statement before ')' token
+  151 | #define RCC    (RCC_TypeDef *)RCC_BASE)
+      |                                       ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:168:4: note: in expansion of macro 'RCC'
+  168 |    RCC->APB2RSTR &= ~(1<<6);
+      |    ^~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:168:7: error: expected expression before '->' token
+  168 |    RCC->APB2RSTR &= ~(1<<6);
+      |       ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:15:49 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: error: 'config_reg' undeclared (first use in this function)
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:94:46: error: 'PinConfig' undeclared (first use in this function); did you mean 'PinConfiq'?
+   94 |  (*config_reg) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                              ^~~~~~~~~
+      |                                              PinConfiq
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:92:21: warning: variable 'configRegister' set but not used [-Wunused-but-set-variable]
+   92 |  volatile uint32_t* configRegister = NULL;
+      |                     ^~~~~~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:17:07 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:17: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP))
+      |                 ^~~~~~~~~
+      |                 GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:67: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP))
+      |                                                                   ^~~~~~~~~
+      |                                                                   GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:117: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP))
+      |                                                                                                                     ^~~~~~~~~
+      |                                                                                                                     GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:164: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP))
+      |                                                                                                                                                                    ^~~~~~~~~
+      |                                                                                                                                                                    GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:31: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                               ^~~~~~~~~
+      |                               GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                              ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:106:18: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  106 |   if((PinConfig->GPIO_MODE == GPIO_MODE_ANALOG)||(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_FLO))
+      |                  ^~~~~~~~~
+      |                  GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:106:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  106 |   if((PinConfig->GPIO_MODE == GPIO_MODE_ANALOG)||(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_FLO))
+      |                                                              ^~~~~~~~~
+      |                                                              GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:109:32: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  109 |    PIN_CONFIG = ((((PinConfig->GPIO_MODE) << 2)|(0x0)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                ^~~~~~~~~
+      |                                GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:23: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                       ^~~~~~~~~
+      |                       GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:120:18: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  120 |    if(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_PU)
+      |                  ^~~~~~~~~
+      |                  GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:17:09 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:17: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP))
+      |                 ^~~~~~~~~
+      |                 GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:67: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP))
+      |                                                                   ^~~~~~~~~
+      |                                                                   GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:117: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP))
+      |                                                                                                                     ^~~~~~~~~
+      |                                                                                                                     GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:164: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP))
+      |                                                                                                                                                                    ^~~~~~~~~
+      |                                                                                                                                                                    GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:31: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                               ^~~~~~~~~
+      |                               GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                              ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:106:18: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  106 |   if((PinConfig->GPIO_MODE == GPIO_MODE_ANALOG)||(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_FLO))
+      |                  ^~~~~~~~~
+      |                  GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:106:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  106 |   if((PinConfig->GPIO_MODE == GPIO_MODE_ANALOG)||(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_FLO))
+      |                                                              ^~~~~~~~~
+      |                                                              GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:109:32: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  109 |    PIN_CONFIG = ((((PinConfig->GPIO_MODE) << 2)|(0x0)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                ^~~~~~~~~
+      |                                GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:23: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                       ^~~~~~~~~
+      |                       GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:120:18: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  120 |    if(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_PU)
+      |                  ^~~~~~~~~
+      |                  GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:17:36 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:17: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_Mode == GPIO_MODE_OUTPUT_PP))
+      |                 ^~~~~~~~~
+      |                 GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:67: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_Mode == GPIO_MODE_OUTPUT_PP))
+      |                                                                   ^~~~~~~~~
+      |                                                                   GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:117: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_Mode == GPIO_MODE_OUTPUT_PP))
+      |                                                                                                                     ^~~~~~~~~
+      |                                                                                                                     GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:31: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                               ^~~~~~~~~
+      |                               GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                              ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:106:18: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  106 |   if((PinConfig->GPIO_MODE == GPIO_MODE_ANALOG)||(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_FLO))
+      |                  ^~~~~~~~~
+      |                  GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:106:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  106 |   if((PinConfig->GPIO_MODE == GPIO_MODE_ANALOG)||(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_FLO))
+      |                                                              ^~~~~~~~~
+      |                                                              GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:109:32: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  109 |    PIN_CONFIG = ((((PinConfig->GPIO_MODE) << 2)|(0x0)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                ^~~~~~~~~
+      |                                GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:23: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                       ^~~~~~~~~
+      |                       GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:120:18: error: 'GPIO_PinConfig_t' has no member named 'GPIO_MODE'; did you mean 'GPIO_Mode'?
+  120 |    if(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_PU)
+      |                  ^~~~~~~~~
+      |                  GPIO_Mode
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:18:31 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:164: error: 'GPIO_PinConfig_t' has no member named 'GPIO_Mode'; did you mean 'GPIO_MODE'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_Mode == GPIO_MODE_OUTPUT_PP))
+      |                                                                                                                                                                    ^~~~~~~~~
+      |                                                                                                                                                                    GPIO_MODE
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                              ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:19:56 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:164: error: 'GPIO_PinConfig_t' has no member named 'GPIO_Mode'; did you mean 'GPIO_MODE'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_Mode == GPIO_MODE_OUTPUT_PP))
+      |                                                                                                                                                                    ^~~~~~~~~
+      |                                                                                                                                                                    GPIO_MODE
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                              ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:20:24 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:97:164: error: 'GPIO_PinConfig_t' has no member named 'GPIO_Mode'; did you mean 'GPIO_MODE'?
+   97 |  if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_Mode == GPIO_MODE_OUTPUT_PP))
+      |                                                                                                                                                                    ^~~~~~~~~
+      |                                                                                                                                                                    GPIO_MODE
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                              ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:20:42 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:62: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                              ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:21:03 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:64: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'; did you mean 'GPIO_Output_SPEED'?
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                                ^~~~~~~~~~~~~~~~~
+      |                                                                GPIO_Output_SPEED
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:21:06 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:64: error: 'GPIO_PinConfig_t' has no member named 'GPIO_OUTPUT_SPEED'; did you mean 'GPIO_Output_SPEED'?
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |                                                                ^~~~~~~~~~~~~~~~~
+      |                                                                GPIO_Output_SPEED
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:21:23 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: error: 'PIN_CONFIG' undeclared (first use in this function)
+  100 |   PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |   ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:3: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:21:44 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:13: warning: assignment to 'GPIO_PinConfig_t *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  100 |   PinConfig = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:109:4: error: 'PIN_CONFIG' undeclared (first use in this function)
+  109 |    PIN_CONFIG = ((((PinConfig->GPIO_MODE) << 2)|(0x0)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:109:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:185:1: warning: control reaches end of non-void function [-Wreturn-type]
+  185 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_ReadPort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:248:1: warning: control reaches end of non-void function [-Wreturn-type]
+  248 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:23:46 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:100:13: warning: assignment to 'GPIO_PinConfig_t *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  100 |   PinConfig = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:109:4: error: 'PIN_CONFIG' undeclared (first use in this function)
+  109 |    PIN_CONFIG = ((((PinConfig->GPIO_MODE) << 2)|(0x0)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+      |    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:109:4: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:111:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  111 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_WritePin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:218:6: error: 'Value' undeclared (first use in this function); did you mean 'value'?
+  218 |  if (Value != GPIO_PIN_RESET)
+      |      ^~~~~
+      |      value
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_WritePort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:238:25: error: 'Value' undeclared (first use in this function); did you mean 'value'?
+  238 |  GPIOx->ODR = (uint32_t)Value;
+      |                         ^~~~~
+      |                         value
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:289:11: error: 'GPIO_RETURN_LOCK_ERROR' undeclared (first use in this function); did you mean 'GPIO_RETURN_LOCK_Error'?
+  289 |    return GPIO_RETURN_LOCK_ERROR;
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+      |           GPIO_RETURN_LOCK_Error
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:291:1: warning: control reaches end of non-void function [-Wreturn-type]
+  291 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:26:21 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:112:36: error: 'GPIO_MODE_AF_INPUT' undeclared (first use in this function); did you mean 'GPIO_MODE_INPUT_AF'?
+  112 |   else if (PinConfig->GPIO_MODE == GPIO_MODE_AF_INPUT) // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+      |                                    ^~~~~~~~~~~~~~~~~~
+      |                                    GPIO_MODE_INPUT_AF
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:112:36: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_WritePin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:219:6: error: 'Value' undeclared (first use in this function); did you mean 'value'?
+  219 |  if (Value != GPIO_PIN_RESET)
+      |      ^~~~~
+      |      value
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_WritePort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:239:25: error: 'Value' undeclared (first use in this function); did you mean 'value'?
+  239 |  GPIOx->ODR = (uint32_t)Value;
+      |                         ^~~~~
+      |                         value
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:290:11: error: 'GPIO_RETURN_LOCK_ERROR' undeclared (first use in this function); did you mean 'GPIO_RETURN_LOCK_Error'?
+  290 |    return GPIO_RETURN_LOCK_ERROR;
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+      |           GPIO_RETURN_LOCK_Error
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:292:1: warning: control reaches end of non-void function [-Wreturn-type]
+  292 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:26:52 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_WritePin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:219:6: error: 'Value' undeclared (first use in this function); did you mean 'value'?
+  219 |  if (Value != GPIO_PIN_RESET)
+      |      ^~~~~
+      |      value
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:219:6: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_WritePort':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:239:25: error: 'Value' undeclared (first use in this function); did you mean 'value'?
+  239 |  GPIOx->ODR = (uint32_t)Value;
+      |                         ^~~~~
+      |                         value
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:290:11: error: 'GPIO_RETURN_LOCK_ERROR' undeclared (first use in this function); did you mean 'GPIO_RETURN_LOCK_Error'?
+  290 |    return GPIO_RETURN_LOCK_ERROR;
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+      |           GPIO_RETURN_LOCK_Error
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:292:1: warning: control reaches end of non-void function [-Wreturn-type]
+  292 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:28:23 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  129 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:130:1: error: expected identifier or '(' before '}' token
+  130 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_LockPin':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:285:11: error: 'GPIO_RETURN_LOCK_ERROR' undeclared (first use in this function); did you mean 'GPIO_RETURN_LOCK_Error'?
+  285 |    return GPIO_RETURN_LOCK_ERROR;
+      |           ^~~~~~~~~~~~~~~~~~~~~~
+      |           GPIO_RETURN_LOCK_Error
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:285:11: note: each undeclared identifier is reported only once for each function it appears in
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:287:1: warning: control reaches end of non-void function [-Wreturn-type]
+  287 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:28:42 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  129 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:130:1: error: expected identifier or '(' before '}' token
+  130 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:29:07 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  129 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:130:1: error: expected identifier or '(' before '}' token
+  130 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:29:41 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  129 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:130:1: error: expected identifier or '(' before '}' token
+  130 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:30:45 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:45: error: expected declaration specifiers or '...' before ',' token
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx ,, uint8_t PinNumber);
+      |                                             ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  129 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:130:1: error: expected identifier or '(' before '}' token
+  130 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:31:07 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  129 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:130:1: error: expected identifier or '(' before '}' token
+  130 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:260:9: error: conflicting types for 'MCAL_GPIO_LockPin'
+  260 | uint8_t MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx , uint8_t PinNumber){
+      |         ^~~~~~~~~~~~~~~~~
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:6: note: previous declaration of 'MCAL_GPIO_LockPin' was here
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx , uint8_t PinNumber);
+      |      ^~~~~~~~~~~~~~~~~
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:31:32 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:128:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  128 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:1: error: expected identifier or '(' before '}' token
+  129 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:259:9: error: conflicting types for 'MCAL_GPIO_LockPin'
+  259 | uint8_t MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx , uint8_t PinNumber){
+      |         ^~~~~~~~~~~~~~~~~
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:6: note: previous declaration of 'MCAL_GPIO_LockPin' was here
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx , uint8_t PinNumber);
+      |      ^~~~~~~~~~~~~~~~~
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:32:08 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:128:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  128 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:1: error: expected identifier or '(' before '}' token
+  129 | }
+      | ^
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:259:9: error: conflicting types for 'MCAL_GPIO_LockPin'
+  259 | uint8_t MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx , uint8_t PinNumber){
+      |         ^~~~~~~~~~~~~~~~~
+In file included from ../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:1:
+M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc/Stm32_F103C6_gpio_driver.h:99:6: note: previous declaration of 'MCAL_GPIO_LockPin' was here
+   99 | void MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx , uint8_t PinNumber);
+      |      ^~~~~~~~~~~~~~~~~
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:32:25 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:128:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  128 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:1: error: expected identifier or '(' before '}' token
+  129 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:33:17 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:128:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '|=' token
+  128 |  (*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(PinConfig->PinNumber));
+      |                    ^~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:1: error: expected identifier or '(' before '}' token
+  129 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:33:47 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: In function 'MCAL_GPIO_Init':
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:93:10: warning: variable 'PIN_CONFIG' set but not used [-Wunused-but-set-variable]
+   93 |  uint8_t PIN_CONFIG = 0 ;
+      |          ^~~~~~~~~~
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c: At top level:
+../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c:129:1: error: expected identifier or '(' before '}' token
+  129 | }
+      | ^
+make: *** [Stm32_F103C6_Drivers/subdir.mk:19: Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+16:34:20 **** Incremental Build of configuration Debug for project Drivers ****
+make -j12 all 
+arm-none-eabi-gcc -gdwarf-2 "../Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"M:/embedded/Diploma/GitRepo/Drivers/Stm32_F103C6_Drivers/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.d" -MT"Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/Stm32_F103C6_gpio_driver.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"M:\embedded\Diploma\GitRepo\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-size   Drivers.elf 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.list
+ 

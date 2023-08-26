@@ -1,0 +1,286 @@
+#include "Stm32_F103C6_gpio_driver.h"
+#include "stm32f103x6.h"
+
+static uint8_t Get_CRLH_Position(uint16_t PinNumber)
+{
+	switch (PinNumber)
+	{
+	case GPIO_PIN_0:
+		return 0;
+		break;
+
+	case GPIO_PIN_1:
+		return 4;
+		break;
+
+	case GPIO_PIN_2:
+		return 8;
+		break;
+
+	case GPIO_PIN_3:
+		return 12;
+		break;
+
+	case GPIO_PIN_4:
+		return 16;
+		break;
+
+	case GPIO_PIN_5:
+		return 20;
+		break;
+
+	case GPIO_PIN_6:
+		return 24;
+		break;
+
+	case GPIO_PIN_7:
+		return 28;
+		break;
+
+	case GPIO_PIN_8:
+		return 0;
+		break;
+
+	case GPIO_PIN_9:
+		return 4;
+		break;
+
+	case GPIO_PIN_10:
+		return 8;
+		break;
+
+	case GPIO_PIN_11:
+		return 12;
+		break;
+
+	case GPIO_PIN_12:
+		return 16;
+		break;
+
+	case GPIO_PIN_13:
+		return 20;
+		break;
+
+	case GPIO_PIN_14:
+		return 24;
+		break;
+
+	case GPIO_PIN_15:
+		return 28;
+		break;
+
+	default:
+		break;
+	}
+	return 0;
+}
+
+
+/**================================================================
+* @Fn		   	- MCAL_GPIO_iNIT
+* @brief		- Initlized the GPIOx Piny according to the specified parametes in the PinConfig
+* @param [in] 	- GPIOx
+* @param [in] 	- PinConfiq pointer to a GPIO_PinConfit_t structure
+* 				  that contains the cofiguration information for the specified GPIO PIN
+* @param [out] 	-
+* @retval 		-
+* Note			-
+*/
+void MCAL_GPIO_Init			(GPIO_TypeDef *GPIOx , GPIO_PinConfig_t* PinConfig){
+	//port Configuration register low (GPIOx_CRL) configure PINS from 0>>>7
+	//port Configuration register high (GPIOx_CRH) configure PINS from 8>>>15
+	volatile uint32_t* configRegister = NULL;
+	uint8_t PIN_CONFIG = 0 ;
+	configRegister = (PinConfig->GPIO_PinNumber<GPIO_PIN_8)? &GPIOx->CRL : &GPIOx->CRH;
+	(*configRegister) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+
+	// If pin is output
+	if((PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_AF_PP)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_OD)||(PinConfig->GPIO_MODE == GPIO_MODE_OUTPUT_PP)){
+		// Set CNF8[1:0] MODE8[1:0]
+		PIN_CONFIG = ((((PinConfig->GPIO_MODE - 4) << 2)|(PinConfig->GPIO_OUTPUT_SPEED)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+
+	}
+	// If pin is input
+	else //00: Input mode (reset state){
+		if((PinConfig->GPIO_MODE == GPIO_MODE_ANALOG)||(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_FLO)){
+			// Set CNF8[1:0] MODE8[1:0] 00
+			PIN_CONFIG = ((((PinConfig->GPIO_MODE) << 2)|(0x0)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+		}
+		else if (PinConfig->GPIO_MODE == GPIO_MODE_INPUT_AF){ // Considered that GPIO_MODE_AF_INPUT = GPIO_MODE_INPUT_FLO in data sheet
+
+			PIN_CONFIG = ((((GPIO_MODE_INPUT_FLO) << 2)|(0x0)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+		}
+		else{ // Pull-up / Pull-Down Input
+			// GPIO_MODE_INPUT_PU == 0b10 as Table 20. Port bit configuration table
+			PIN_CONFIG = ((((GPIO_MODE_INPUT_PU) << 2)|(0x0)) & 0x0F); // "-4" > for definition on .h file  and "& 0x0F" > for neglect all remaining bits
+
+			if(PinConfig->GPIO_MODE == GPIO_MODE_INPUT_PU){
+				// PxODR = 1 Input pull-up: Table 20. Port bit configuration table
+				GPIOx->ODR |= PinConfig->GPIO_PinNumber;
+			}
+			else{
+				// PxODR = 0 Input pull-down: Table 20. Port bit configuration table
+				GPIOx->ODR &= ~(PinConfig->GPIO_PinNumber);
+			}
+		}
+	}
+	// Write on CRL or CRH
+	//(*configRegister) |= (PIN_CONFIG << Get_CRLH_Position(Pin));
+}
+
+
+/**================================================================
+* @Fn		   	- MCAL_GPIO_DEiNIT
+* @brief		- reset port regiesters
+* @param [in] 	- GPIOx
+* @param [out] 	-
+* @retval 		-
+* Note			-
+*/
+void MCAL_GPIO_DeInit 		(GPIO_TypeDef *GPIOx){
+	if(GPIOx == GPIOA)
+		{
+			RCC->APB2RSTR |= (1<<2);
+			RCC->APB2RSTR &= ~(1<<2);
+		}
+		else if (GPIOx == GPIOB)
+		{
+			RCC->APB2RSTR |= (1<<3);
+			RCC->APB2RSTR &= ~(1<<3);
+		}
+		else if (GPIOx == GPIOC)
+		{
+			RCC->APB2RSTR |= (1<<4);
+			RCC->APB2RSTR &= ~(1<<4);
+		}
+		else if (GPIOx == GPIOD){
+			RCC->APB2RSTR |= (1<<5);
+			RCC->APB2RSTR &= ~(1<<5);
+		}
+		else if (GPIOx == GPIOE)
+		{
+			RCC->APB2RSTR |= (1<<6);
+			RCC->APB2RSTR &= ~(1<<6);
+		}
+
+}
+
+//Read
+/**================================================================
+* @Fn		   	- MCAL_GPIO_ReadPin
+* @brief		- read specifc PIN
+* @param [in] 	- GPIOx
+* @param [in] 	- PinNumber : set Pin Number according @ref GPIO_PINS_define
+* @retval 		- the value of the specifid pin according to @ ref GPIO_PIN_state
+*
+* Note			-
+*/
+uint8_t MCAL_GPIO_ReadPin	(GPIO_TypeDef *GPIOx , uint8_t PinNumber){
+	uint8_t bit_status;
+	if(((GPIOx->IDR) & PinNumber) != GPIO_PIN_RESET)
+	{
+		bit_status = GPIO_PIN_SET;
+	}
+	else
+	{
+		bit_status = GPIO_PIN_RESET;
+	}
+	return bit_status;
+}
+/**================================================================
+* @Fn		   	- MCAL_GPIO_ReadPort
+* @brief		- read specifc port
+* @param [in] 	- GPIOx
+* @retval 		- the value of the specifid port
+* Note			-
+*/
+uint16_t MCAL_GPIO_ReadPort	(GPIO_TypeDef *GPIOx){
+	return (uint16_t)(GPIOx->IDR);
+}
+
+//Write
+/**================================================================
+* @Fn		   	- MCAL_GPIO_WritePin
+* @brief		- write to pin
+* @param [in] 	- GPIOx
+* @param [in] 	- PinNumber : set Pin Number according @ref GPIO_PINS_define
+* @param [in] 	- value : value to be written in pin according to @ ref GPIO_PIN_state
+* @retval 		-
+* Note			-
+*/
+
+void MCAL_GPIO_WritePin	(GPIO_TypeDef *GPIOx , uint8_t PinNumber, uint8_t value){
+	if (value != GPIO_PIN_RESET)
+	{
+		//GPIOx->ODR |= PinNumber;
+		//OR by using BSRR register
+		GPIOx->BSRR = (uint32_t)PinNumber;
+	}
+	else
+	{
+		GPIOx->BRR = (uint32_t)PinNumber;
+	}
+}
+/**================================================================
+* @Fn		   	- MCAL_GPIO_WritePort
+* @brief		- write to port
+* @param [in] 	- GPIOx
+* @param [in] 	- value : value to be written in port
+* @retval 		-
+* Note			-
+*/
+void MCAL_GPIO_WritePort		(GPIO_TypeDef *GPIOx ,	uint8_t value){
+	GPIOx->ODR = (uint32_t)value;
+}
+
+//toggle
+/**================================================================
+* @Fn		   	- MCAL_GPIO_WritePort
+* @brief		- toggle pin value
+* @param [in] 	- GPIOx
+* @param [in] 	- value : value to be written in port
+* @param [in] 	- PinNumber : set Pin Number according @ref GPIO_PINS_define
+* @retval 		-
+* Note			-
+*/
+void MCAL_GPIO_TogglePin(GPIO_TypeDef *GPIOx , uint8_t PinNumber){
+	GPIOx->ODR ^= (PinNumber);
+}
+
+//lock
+/**================================================================
+* @Fn		   	- MCAL_GPIO_WritePort
+* @brief		- freeze pin until reset
+* @param [in] 	- GPIOx
+* @param [in] 	- PinNumber : set Pin Number according @ref GPIO_PINS_define
+* @retval 		- Lock statue according to @ref GPIO_RETURN_LOCK
+* Note			-
+*/
+uint8_t MCAL_GPIO_LockPin(GPIO_TypeDef *GPIOx , uint8_t PinNumber){
+	volatile uint32_t temp = 1<<16;
+
+		//Set the LCKy
+		temp |= PinNumber;
+
+		//Write 1
+		GPIOx->LCKR = temp;
+
+		//Write 0
+		GPIOx->LCKR = PinNumber;
+
+		//Write 1
+		GPIOx->LCKR = temp;
+
+		//Read 0
+		temp = GPIOx->LCKR;
+
+		//Read 1 (this read is optional but confirms that the lock is active)
+		if((uint32_t)GPIOx->LCKR & 1<<16)
+		{
+			return GPIO_RETURN_LOCK_Enabled;
+		}
+		else
+		{
+			return GPIO_RETURN_LOCK_Error;
+		}
+}

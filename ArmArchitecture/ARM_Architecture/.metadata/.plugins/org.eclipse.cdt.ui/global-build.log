@@ -1,0 +1,77 @@
+10:25:56 **** Build of configuration Debug for project ARM_Course ****
+make -j12 all 
+arm-none-eabi-gcc "../Stm32_F103C6_Drivers/GPIO/stm32f103x8_gpio_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Stm32_F103C6_Drivers/GPIO/stm32f103x8_gpio_driver.d" -MT"Stm32_F103C6_Drivers/GPIO/stm32f103x8_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/GPIO/stm32f103x8_gpio_driver.o"
+arm-none-eabi-gcc "../Stm32_F103C6_Drivers/stm32f103x8_EXTI_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Stm32_F103C6_Drivers/stm32f103x8_EXTI_driver.d" -MT"Stm32_F103C6_Drivers/stm32f103x8_EXTI_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/stm32f103x8_EXTI_driver.o"
+arm-none-eabi-gcc "../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.d" -MT"Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.o"
+arm-none-eabi-gcc "../Stm32_F103C6_Drivers/stm32f103x8_RCC_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Stm32_F103C6_Drivers/stm32f103x8_RCC_driver.d" -MT"Stm32_F103C6_Drivers/stm32f103x8_RCC_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/stm32f103x8_RCC_driver.o"
+arm-none-eabi-gcc "../Stm32_F103C6_Drivers/stm32f103x8_SPI_Drver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Stm32_F103C6_Drivers/stm32f103x8_SPI_Drver.d" -MT"Stm32_F103C6_Drivers/stm32f103x8_SPI_Drver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/stm32f103x8_SPI_Drver.o"
+arm-none-eabi-gcc "../Stm32_F103C6_Drivers/stm32f103x8_USART_driver.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Stm32_F103C6_Drivers/stm32f103x8_USART_driver.d" -MT"Stm32_F103C6_Drivers/stm32f103x8_USART_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Stm32_F103C6_Drivers/stm32f103x8_USART_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/GPIO" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers/inc" -I"M:/embedded/Diploma/ARM_Course/Stm32_F103C6_Drivers" -I"M:/embedded/Diploma/ARM_Course/HAL/includes" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Stm32_F103C6_Drivers/stm32f103x8_USART_driver.c: In function 'MCAL_UART_SendData':
+../Stm32_F103C6_Drivers/stm32f103x8_USART_driver.c:180:12: warning: unused variable 'pdata' [-Wunused-variable]
+  180 |  uint16_t *pdata;
+      |            ^~~~~
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:20:42: warning: initialization of 'long unsigned int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   20 | I2C_InitTypeDef Global_I2C_Config[2]  = {NULL,NULL} ;
+      |                                          ^~~~
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:20:42: note: (near initialization for 'Global_I2C_Config[0].I2C_ClockSpeed')
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:20:47: warning: initialization of 'long unsigned int' from 'void *' makes integer from pointer without a cast [-Wint-conversion]
+   20 | I2C_InitTypeDef Global_I2C_Config[2]  = {NULL,NULL} ;
+      |                                               ^~~~
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:20:47: note: (near initialization for 'Global_I2C_Config[0].StretchMode')
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:20:41: warning: missing braces around initializer [-Wmissing-braces]
+   20 | I2C_InitTypeDef Global_I2C_Config[2]  = {NULL,NULL} ;
+      |                                         ^
+../Stm32_F103C6_Drivers/stm32f103x8_SPI_Drver.c: In function 'MCAL_SPI_GPIO_Set_Pins':
+../Stm32_F103C6_Drivers/stm32f103x8_SPI_Drver.c:274:4: warning: case label value is less than minimum value for type [-Wswitch-outside-range]
+  274 |    case SPI_NSS_Hard_Master_SS_output_disable:
+      |    ^~~~
+../Stm32_F103C6_Drivers/stm32f103x8_SPI_Drver.c:376:4: warning: case label value is less than minimum value for type [-Wswitch-outside-range]
+  376 |    case SPI_NSS_Hard_Master_SS_output_disable:
+      |    ^~~~
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c: In function 'I2C_GetFlagStatus':
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:400:20: warning: unused variable 'dummyRead' [-Wunused-variable]
+  400 |  volatile uint32_t dummyRead ;
+      |                    ^~~~~~~~~
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c: In function 'I2C1_EV_IRQHandler':
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:544:4: warning: implicit declaration of function 'Slave_States' [-Wimplicit-function-declaration]
+  544 |    Slave_States(I2Cx,I2C_EV_STOP);
+      |    ^~~~~~~~~~~~
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:527:20: warning: variable 'dummy_read' set but not used [-Wunused-but-set-variable]
+  527 |  volatile uint32_t dummy_read = 0 ;
+      |                    ^~~~~~~~~~
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c: At top level:
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:612:6: warning: conflicting types for 'Slave_States'
+  612 | void Slave_States (I2C_TypeDef* I2Cx  ,Slave_State state)
+      |      ^~~~~~~~~~~~
+../Stm32_F103C6_Drivers/stm32f103x8_I2C_Drver.c:544:4: note: previous implicit declaration of 'Slave_States' was here
+  544 |    Slave_States(I2Cx,I2C_EV_STOP);
+      |    ^~~~~~~~~~~~
+../Stm32_F103C6_Drivers/stm32f103x8_RCC_driver.c: In function 'MCAL_RCC_GetSYS_CLCKFreq':
+../Stm32_F103C6_Drivers/stm32f103x8_RCC_driver.c:87:1: warning: control reaches end of non-void function [-Wreturn-type]
+   87 | }
+      | ^
+../Src/main.c:50:23: warning: initialization of 'unsigned int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+   50 | unsigned int _S_MSP = &_estack;
+      |                       ^
+../Src/main.c: In function 'mainOS':
+../Src/main.c:122:8: warning: unused variable 'x' [-Wunused-variable]
+  122 |    int x = TASKA(1,2,3);
+      |        ^
+../Src/main.c:134:8: warning: unused variable 'x' [-Wunused-variable]
+  134 |    int x = TASKB(2,3,4,5);
+      |        ^
+arm-none-eabi-gcc -o "ARM_Course.axf" @"objects.list"   -mcpu=cortex-m3 -T"M:\embedded\Diploma\ARM_Architecture\ARM_Course\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ARM_Course.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ARM_Course.axf
+ 
+arm-none-eabi-size   ARM_Course.axf 
+arm-none-eabi-objdump -h -S  ARM_Course.axf  > "ARM_Course.list"
+   text	   data	    bss	    dec	    hex	filename
+   4028	     12	   1732	   5772	   168c	ARM_Course.axf
+Finished building: default.size.stdout
+ 
+Finished building: ARM_Course.list
+ 
